@@ -1,0 +1,29 @@
+<!--  PARTIAL DE TARJETA DE PRODUCTOS -->
+
+<div id="<%= product.id %>" class="ladofrente col-md-4 col-lg-3 tarjeta-recetas tarjetaProd prodFavId">
+    <a href="/product/details/<%= product.id %>">
+        <figure class="img-tarjeta-receta" id="img-tarjeta-prod">
+            <img src="/images/imgProductos/<%= product.image %>" alt="Imagen de <%= product.name %>">
+        </figure>
+    </a>
+
+    <div class="row">
+        <div class="col-9 productPrice">
+            <% if (product.discount > 0) { %>
+                <span class="ml-auto precio_producto">$ <%= product.price %> </span>
+                <span class="discountTagPosition">
+                <i class="fas fa-tag discountTag"></i> <span class="discountTag"><%= product.discount %>% OFF
+                </span>
+                </span>
+                <% }else { %>
+                    <span class="ml-auto precio_producto">$ <%= product.price %> </span>
+                    <% } %>
+        </div>
+        <i class="far fa-heart col-3 prodFav" id="<%= product.id %>"></i>
+    </div>
+
+    <span class="col-9 tituloscard name-product-card"> <%= product.name %> </span> <span class="col-3 quantity-prod-card"><%= product.quantity %> <%= product.unit %></span>
+    <!-- <p class="description-prod-card"><%= product.description_short %></p> -->
+
+    <button class="col-8 col-lg-7 mt-3 d-flex justify-content-center align-items-center btn_producto" onclick='CART.add(parseInt("<%= product.id %>"),"<%= product.name %>","<%= product.description_short %>",parseInt("<%= product.quantity %>"),"<%= product.unit %>",parseInt("<%= product.price %>"),parseInt("<%= product.discount %>"),"<%= product.image %>")'>AGREGAR AL CARRITO</button>
+</div>

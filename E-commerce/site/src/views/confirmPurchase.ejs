@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include("partials/head", {title: "Confirmación de compra"}) %>
+</head>
+
+<body>
+
+    <!-- LOGO -->
+    <!-- MENU CON BOTONES DE REGISTRO -->
+    <div class="container-fluid">
+
+        <!-- HEADER -->
+        <%- include("partials/header", {usuarioLogueado: usuarioLogueado}) %>
+            <!-- /HEADER -->
+
+            <!--MAIN -->
+
+            <!-- Content -->
+
+            <!-- Container -->
+            <div class="caja mb-3">
+                <div class="cardCarrito">
+                    <div class="row">
+                        <div class="col-md-8 cartCarrito">
+                            <div class="title">
+                                <div class="row">
+                                    <div class="col">
+                                        <h3 class="col-12 titulo_seccion">Confirmación de compra</h3>
+                                    </div>
+                                    <div class="col align-self-center text-right text-muted qtyItems"></div>
+                                </div>
+                            </div>
+                            <div id="cartList" class="row">
+
+                            </div>
+
+
+                            <!-- <div class="back-to-shop align-self-center d-flex justify-content-center"><a href="/product/" class="volver">Volver a la tienda</a><span class="align-self-center text-muted"></span></div> -->
+                            <button class="btn-vaciar-carrito col-6 mx-auto secondary ui-button ui-button--secondary d-flex justify-content-center" onclick="location.href='/cart/'">Volver al carrito</button>
+                        </div>
+                        <div class="col-md-4 summary">
+                            <div>
+                                <h3 class="titulo_seccion">Orden</h3>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-5 titulo_producto Items"></div>
+                                <div class="col-7 text-right precio_producto precio_carrito precio_productos"></div>
+                            </div>
+                            <!-- POR SI EL DIA DE MAÑANA AGREGAMOS ENVÍOS <form>
+                        <p>SHIPPING</p> <select>
+                            <option class="text-muted">Standard-Delivery- &euro;5.00</option>
+                        </select>
+                        <p>GIVE CODE</p> <input id="code" placeholder="Enter your code">
+                    </form>-->
+                            <div class="row" style="border-top: 1px solid rgba(0,0,0,.1); padding: 2vh 0;">
+                                <div class="col-5 titulo_producto">TOTAL</div>
+                                <div class="col-7 text-right precio_producto precio_carrito precio_total"></div>
+                            </div>
+                            <form method="post" action="/cart/createOrder" id="createOrderForm">
+                                <input name="id_user" type="number" value="<%= usuarioLogueado.id %>" style="display:none">
+                                <button type="submit" onclick="confirmPurchase()" class="btn-finalizar-compra col">CONFIRMAR COMPRA</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <%- include("partials/footer") %>
+                <!-- /FOOTER -->
+
+    </div>
+
+    <script type='text/javascript' src="/js/cart.js">
+    </script>
+    <script type='text/javascript' src="/js/confirmPurchase.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script type='text/javascript' src="/js/userValidator.js"></script>
+</body>
+
+</html>

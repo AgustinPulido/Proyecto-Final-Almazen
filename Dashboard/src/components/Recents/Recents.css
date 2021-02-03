@@ -1,0 +1,18 @@
+.headRec {
+    color: blue !important;
+    font-weight: 500;
+}
+
+.lineaRec {
+    border-bottom: 2px solid blue;
+}
+
+.title {
+    padding-left: 5%;
+}
+
+.prod {
+    text-align: start;
+    padding-left: 5% !important;
+}
+

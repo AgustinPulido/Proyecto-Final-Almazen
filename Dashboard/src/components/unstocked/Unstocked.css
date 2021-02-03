@@ -1,0 +1,17 @@
+.headStock {
+    color: #CF664F !important;
+    font-weight: 500;
+}
+
+.lineaStock {
+    border-bottom: 2px solid #CF664F;
+}
+
+.title {
+    padding-left: 5%;
+}
+
+.prod {
+    text-align: start;
+    padding-left: 5% !important;
+}

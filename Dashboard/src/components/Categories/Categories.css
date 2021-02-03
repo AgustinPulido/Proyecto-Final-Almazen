@@ -1,0 +1,129 @@
+.componentes {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style:none;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    margin-left: 1rem;
+
+}
+
+*{
+    margin:0px;
+    padding: 0px; 
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin:0px;
+    padding: 0px;
+}
+
+.componentes{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style:none;
+    flex-wrap: wrap;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.lastProduct, .UserRol, .Category, .Stock{
+    
+    border-radius: 4px;
+    border: 1px solid #5F9557;
+    display:flex;
+    flex-direction: column;
+    
+}
+.Stock{
+    
+    border-radius: 4px;
+    border: 1px solid #AE2D11;
+    display:flex;
+    flex-direction: column;
+    
+}
+
+.headcard{
+font-family: Poppins;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 27px;
+display: flex;
+align-items: center;
+letter-spacing: 0.005em;
+color: #5F9557;
+}
+
+.headcardred{
+font-family: Poppins;
+font-style: normal;
+font-weight: 800;
+font-size: 20px;
+line-height: 30px;
+display: flex;
+align-items: center;
+letter-spacing: 0.005em;
+color: #AE2D11;
+}
+
+/* .contenido-card{
+
+} */
+.element{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.005em;
+    color: #494949;
+}
+
+.categoryName {
+    text-align: start;
+    text-transform: capitalize;
+    padding-left: 5% !important;
+}
+
+#cards {
+    color: #2b2b2b;
+    margin-bottom: 5%;
+    border: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.25s;
+    padding: 10px;
+    border-radius: 5%;
+    background-color: white;
+    font-family: Poppins;
+    color: #2b2b2b;
+    padding: 2% 0 1% 2%;
+}
+
+.headCat {
+    color: #219653 !important;
+    font-weight: 500;
+}
+
+.lineaCat {
+    border-bottom: 2px solid #219653 !important;
+}
+
+.title {
+    padding-left: 5%;
+}
+
+.prod {
+    text-align: start;
+    padding-left: 5% !important;
+}
