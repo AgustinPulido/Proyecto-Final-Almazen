@@ -1,18 +1,6 @@
 
 	PROYECTO INTEGRADOR | ALMAZEN
 
-
-- Repositoro GitHub: https://github.com/mcampoy/grupo_1_almazen.git
-
-
-- Integrantes del equipo
-
-- Agustín Pulido
-- Hernan Gómez
-- Matías Campoy
-- Rafael Videla
-
-
 - Propuesta
 
 Desarrollo de la ecommerce ALMAZEN, una tienda online de productos naturales y saludables. ALMAZEN está pensada para personas de entre 20 y 50 años que buscan comer platos realizados con ingredientes saludables: bien porque lo necesitan por alguna condición o enfermedad de base (diabetes, celiaquía) o bien por elección y filosofía de vida (veganismo o vegetarianismo). 
